@@ -1319,23 +1319,15 @@ login(
                       : "";
 
                   if (
-                    subCmd ===
-                      "off" ||
-                    subCmd ===
-                      "إيقاف" ||
-                    subCmd ===
-                      "تعطيل"
+                    subCmd === "off" ||
+                    subCmd === "إيقاف" ||
+                    subCmd === "تعطيل"
                   ) {
-                    groupManager.disable(
-                      threadID,
-                      "alox"
-                    );
+                    groupManager.disable(threadID, "alox");
                   } else if (
-                    subCmd ===
-                      "on" ||
-                    subCmd ===
-                      "تشغيل" ||
-                    subCmd ===
-                      "تفعيل"
+                    subCmd === "on" ||
+                    subCmd === "تشغيل" ||
+                    subCmd === "تفعيل"
                   ) {
-                    groupManager
+                    groupManager.enable(threadID, "alox");
+          }
